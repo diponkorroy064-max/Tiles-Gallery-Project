@@ -1,10 +1,11 @@
 import React from 'react';
+import { HashLoader } from 'react-spinners';
 
 const loading = () => {
     return (
         <div>
             <p>Tiles Loading...</p>
-            <span className="loading loading-spinner loading-xl"></span>
+            <p><HashLoader /></p>
         </div>
     );
 };
