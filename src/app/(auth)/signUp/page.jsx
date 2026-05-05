@@ -25,7 +25,7 @@ const SignUpPage = () => {
         console.log("signup response", res, error);
 
         if (error) {
-            toast.error('Registration Filed' + error.message);
+            toast.error('Registration Filed: ' + error.message);
         }
         else if (res) {
             toast.success('Registration is Successfull! Verify your Email');
