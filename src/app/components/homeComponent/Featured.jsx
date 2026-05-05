@@ -5,7 +5,12 @@ import TilesCard from '../shared/TilesCard';
 
 const Featured = async() => {
     const allTiles = await allTilesData();
-    const topTiles = allTiles.slice(0, 4);
+    const filteredTiles = allTiles.filter(item => {
+        const top = item.price > 45;
+        return top;
+    });
+    // console.log(filteredTiles);
+    const topTiles = filteredTiles.slice(0, 4);
     // console.log(topTiles);
     
     return (
