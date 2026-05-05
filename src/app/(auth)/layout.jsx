@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/shared/Navbar';
 
-const AuthLayout = (children) => {
+const AuthLayout = ({children}) => {
     return (
         <div>
             <Navbar></Navbar>

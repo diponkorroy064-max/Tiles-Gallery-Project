@@ -9,13 +9,13 @@ import { BsLinkedin } from 'react-icons/bs';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-gray-300">
+        <footer className="container mx-auto bg-gray-900 text-gray-300">
             <div className="max-w-7xl mx-auto px-6 py-12 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
                     {/* Brand Section */}
                     <div className="space-y-4">
-                        <h2 className="text-white text-2xl font-bold">BrandName</h2>
+                        <h2 className="text-white text-2xl font-bold">Tiles Gallery</h2>
                         <p className="text-sm leading-6">
                             Building modern digital experiences with speed and precision. Follow our journey on social media.
                         </p>
@@ -44,7 +44,7 @@ const Footer = () => {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-3">
                                 <Mail size={16} className="text-indigo-500" />
-                                <span>support@brandname.com</span>
+                                <span>diponkorroy064@gmail.com</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={16} className="text-indigo-500" />
@@ -52,7 +52,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <MapPin size={16} className="text-indigo-500" />
-                                <span>123 Tech Lane, Silicon Valley, CA</span>
+                                <span>Dhaka 1207, Agargaon, Mirpur Road</span>
                             </li>
                         </ul>
                     </div>
@@ -74,8 +74,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs">
-                    <p>© {new Date().getFullYear()} BrandName Inc. All rights reserved.</p>
+                <div className="mt-12 pt-8 border-t border-gray-600 text-center text-xs">
+                    <p>© {new Date().getFullYear()} Tiles Gallery Inc. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -83,3 +83,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

@@ -9,7 +9,7 @@ const links = <>
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="container mx-auto navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,7 +21,7 @@ const Navbar = () => {
                        {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <h1 className="text-2xl font-extrabold text-shadow-gray-500 text-shadow-2xs">Tiles Gallery</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className='btn btn-primary'><Link href={'/login'}>Login</Link></button>
+                <button className='btn btn-primary'><Link href={'/signIn'}>sign in</Link></button>
             </div>
         </div>
     );
