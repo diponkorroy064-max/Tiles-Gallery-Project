@@ -44,7 +44,7 @@ const Footer = () => {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-3">
                                 <Mail size={16} className="text-indigo-500" />
-                                <span>diponkorroy064@gmail.com</span>
+                                <span><Link href={"mailto:diponkorroy064@gmail.com"}>diponkorroy064@gmail.com</Link></span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={16} className="text-indigo-500" />
@@ -60,7 +60,7 @@ const Footer = () => {
                     {/* Newsletter / Call to Action */}
                     <div>
                         <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
-                        <p className="text-xs mb-4">Subscribe to get the latest news and updates.</p>
+                        <p className="text-xs mb-4">Subscribe to get the branded tiles and updates.</p>
                         <form className="flex flex-col space-y-2">
                             <input
                                 type="email"

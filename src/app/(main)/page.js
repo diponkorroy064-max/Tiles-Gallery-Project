@@ -1,5 +1,5 @@
 import Bannar from "../components/homeComponent/Bannar";
-import BreakingNews from "../components/homeComponent/BreakingNews";
+import BreakingNews from "../components/homeComponent/MarqueeSection";
 import Featured from "../components/homeComponent/Featured";
 
 

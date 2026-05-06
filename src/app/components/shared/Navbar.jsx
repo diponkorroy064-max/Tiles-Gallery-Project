@@ -19,7 +19,7 @@ const Navbar = () => {
     // console.log("data", data);
 
     const user = data?.user;
-    console.log(user);
+    // console.log(user);
 
 
     return (
@@ -35,7 +35,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <h1 className="text-2xl text-blue-700 font-extrabold text-shadow-gray-500 text-shadow-2xs">Tiles Gallery</h1>
+                <h1 className="text-2xl text-blue-700 font-extrabold text-shadow-gray-500 text-shadow-2xs"><Link href={"/"}>Tiles Gallery</Link></h1>
             </div>
 
             <div className="navbar-center hidden lg:flex">
@@ -48,8 +48,8 @@ const Navbar = () => {
                 {isPending ? "loading..." :
                     user ? (
                         <>
-                            <p className='text-green-600 font-bold'>{user?.name || "User"}</p>
-                            <Image className='border border-gray-400 rounded-full' src={user?.image || avatarImg} width={40} height={40} alt='User Avater'></Image>
+                            <p className='text-green-600 font-bold hover:text-blue-600'><Link href={"/myProfile"}>{user?.name || "User"}</Link></p>
+                            <Link href={"/myProfile"}><Image className='border border-gray-400 rounded-full' src={user?.image || avatarImg} width={40} height={40} alt='User Avater'></Image></Link>
                             <button className='btn btn-primary' onClick={async () => await authClient.signOut()}>Sign Out</button>
                         </>) :
                         (<button className='btn btn-primary'><Link href={'/signIn'}>Sign in</Link></button>)

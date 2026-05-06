@@ -1,8 +1,10 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 
 
@@ -20,7 +22,7 @@ const SignUpPage = () => {
             email: email, // required
             password: password, // required
             image: photo,
-            callbackURL: "/",
+            callbackURL: "/signIn",
         });
         console.log("signup response", res, error);
 
@@ -32,6 +34,12 @@ const SignUpPage = () => {
         }
     }
 
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+        // console.log(data);
+    };
 
 
     return (
@@ -40,7 +48,7 @@ const SignUpPage = () => {
             <h2 className='text-3xl font-bold'>Register Your Account</h2>
 
             <form onSubmit={handleSubmit(signUpFun)}>
-                <fieldset className="fieldset bg-base-200 border-gray-300 border rounded-md w-99 px-4 py-6">
+                <fieldset className="fieldset bg-base-200 border-gray-300 border rounded-md w-96 px-4 py-6">
 
                     <label className="text-[14px] font-semibold">Name</label>
                     <input name='name' type="name" className="input w-full" placeholder="Enter Your Name" {...register("name", { required: true })} />
@@ -65,8 +73,14 @@ const SignUpPage = () => {
                     </fieldset>
 
                     <button className="btn btn-neutral mt-4">Sign Up</button>
+
+                    <p className='text-sm text-center mt-4'>
+                        Already Have an Account? <Link href='/signIn' className='text-red-500 hover:underline'>Sign in</Link>
+                    </p>
                 </fieldset>
             </form>
+
+            <button onClick={handleGoogleSignIn} className='btn btn-outline btn-primary w-96'><FcGoogle />Login with Google</button>
         </div>
     );
 };

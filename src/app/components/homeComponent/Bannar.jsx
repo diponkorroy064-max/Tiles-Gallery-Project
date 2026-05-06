@@ -17,8 +17,8 @@ const Hero = () => {
 
             {/* Content */}
             <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-white drop-shadow-lg">
-                    Perfect <span className="text-indigo-400">Aesthetic</span>
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tighter text-white drop-shadow-lg">
+                    Discover Your Perfect <span className="text-indigo-400">Aesthetic</span>
                 </h1>
 
                 <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-medium">
@@ -28,7 +28,7 @@ const Hero = () => {
 
                 <div className="mt-10">
                     <Link
-                        href="/all-tiles"
+                        href="/allTiles"
                         className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-indigo-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-500 shadow-xl hover:scale-105"
                     >
                         Browse Now

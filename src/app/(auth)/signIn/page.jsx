@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 
 
@@ -30,6 +31,13 @@ const SignInPage = () => {
         else if (res) {
             toast.success('SignIn is Successfull!');
         }
+    }
+
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+        console.log(data);
     }
 
 
@@ -61,6 +69,7 @@ const SignInPage = () => {
                     </p>
                 </fieldset>
             </form>
+            <button onClick={handleGoogleSignIn} className='btn btn-outline btn-primary w-96'><FcGoogle />Login with Google</button>
         </div>
     );
 };
