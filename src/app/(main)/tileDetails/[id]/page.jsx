@@ -3,6 +3,8 @@ import Image from 'next/image';
 import React from 'react';
 import { CiStar } from 'react-icons/ci';
 import { FaStar } from 'react-icons/fa';
+import { FaRegCircleDot } from 'react-icons/fa6';
+
 
 const TileDetailsPage = async({ params }) => {
     const { id } = await params;
@@ -14,7 +16,7 @@ const TileDetailsPage = async({ params }) => {
     const findData = data.find(item => item.id === id);
     console.log(findData);
     
-    const { title, description, dimensions, price, image, brand, material, category, ratings } = findData;
+    const { title, description, dimensions, price, image, brand, material, category, ratings, tags } = findData;
 
     return (
         <div className='container mx-auto px-10 py-15'>
@@ -32,6 +34,12 @@ const TileDetailsPage = async({ params }) => {
                         <p className='font-bold flex justify-start items-center gap-2'><span className='text-red-500 flex'>{ratings >= 460 ? (<><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></>) : ratings >= 360 ? (<><FaStar /><FaStar /><FaStar /><FaStar /><CiStar /></>) : (<><FaStar /><FaStar /><FaStar /><CiStar /><CiStar /></>) }</span>Ratings : {ratings}</p>
 
                         <p className='font-semibold text-gray-700'>{description}</p>
+
+                        <div className='font-bold text-2xl text-blue-600 flex flex-row gap-6'>
+                            {
+                                tags.map((item, idx) => <span key={idx} className='flex items-center gap-1'><FaRegCircleDot className='text-sm'/> {item}</span>)
+                            }
+                        </div>
 
                         <p className='font-semibold'>Size : <span className='text-3xl font-bold'>{dimensions}</span></p>
 

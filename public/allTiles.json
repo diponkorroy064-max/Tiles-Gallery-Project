@@ -6,6 +6,11 @@
         "image": "https://i.ibb.co.com/kfBfnWc/ceramic-tile.avif",
         "category": "ceramic",
         "brand": "RAK Ceramics",
+        "tags": [
+            "Blue",
+            "Smooth",
+            "Bathroom"
+        ],
         "price": 45.99,
         "currency": "USD",
         "dimensions": "60x60 cm",
@@ -20,6 +25,11 @@
         "image": "https://i.ibb.co.com/TxYq03fC/marble.webp",
         "category": "marble",
         "brand": "Daltile",
+        "tags": [
+            "Luxury",
+            "White",
+            "Marble"
+        ],
         "price": 89.50,
         "currency": "USD",
         "dimensions": "60x120 cm",
@@ -34,6 +44,11 @@
         "image": "https://i.ibb.co.com/Zznr122H/matte-slate.avif",
         "category": "porcelain",
         "brand": "Florida Tile",
+        "tags": [
+            "Matte",
+            "Grey",
+            "Outdoor"
+        ],
         "price": 32.25,
         "currency": "USD",
         "dimensions": "30x60 cm",
@@ -48,6 +63,11 @@
         "image": "https://i.ibb.co.com/RpDzFmJy/Emerald-Glass-Mosaic.jpg",
         "category": "glass",
         "brand": "SICIS",
+        "tags": [
+            "Emerald",
+            "Mosaic",
+            "Glass"
+        ],
         "price": 12.99,
         "currency": "USD",
         "dimensions": "30x30 cm",
@@ -62,6 +82,11 @@
         "image": "https://i.ibb.co.com/PLK19Bp/Rustic-Terracotta.jpg",
         "category": "terracotta",
         "brand": "Cotto d'Este",
+        "tags": [
+            "Rustic",
+            "Earthy",
+            "Terracotta"
+        ],
         "price": 28.00,
         "currency": "USD",
         "dimensions": "40x40 cm",
@@ -76,6 +101,11 @@
         "image": "https://i.ibb.co.com/BVmBgtXs/Beige-Travertine.webp",
         "category": "stone",
         "brand": "MSI Surfaces",
+        "tags": [
+            "Beige",
+            "Stone",
+            "Rustic"
+        ],
         "price": 55.75,
         "currency": "USD",
         "dimensions": "45x45 cm",
@@ -90,6 +120,11 @@
         "image": "https://i.ibb.co.com/DPvNd8SS/Polished-Onyx-Black.avif",
         "category": "porcelain",
         "brand": "Atlas Concorde",
+        "tags": [
+            "Polished",
+            "Black",
+            "Glossy"
+        ],
         "price": 62.40,
         "currency": "USD",
         "dimensions": "80x80 cm",
@@ -104,6 +139,11 @@
         "image": "https://i.ibb.co.com/7tMSJr4p/Wood-Look-Plank.jpg",
         "category": "wood-look",
         "brand": "Marazzi",
+        "tags": [
+            "Wood",
+            "Natural",
+            "Oak"
+        ],
         "price": 38.90,
         "currency": "USD",
         "dimensions": "20x120 cm",
@@ -118,6 +158,11 @@
         "image": "https://i.ibb.co.com/S4zQb70D/geometric-cement-tiles.webp",
         "category": "cement",
         "brand": "Laminam",
+        "tags": [
+            "Geometric",
+            "Modern",
+            "Monochrome"
+        ],
         "price": 18.50,
         "currency": "USD",
         "dimensions": "20x20 cm",
@@ -132,6 +177,11 @@
         "image": "https://i.ibb.co.com/SXCd8yyN/Subway-Gloss-White.jpg",
         "category": "ceramic",
         "brand": "Kajaria Ceramics",
+        "tags": [
+            "White",
+            "Classic",
+            "Backsplash"
+        ],
         "price": 22.00,
         "currency": "USD",
         "dimensions": "10x30 cm",
@@ -146,6 +196,11 @@
         "image": "https://i.ibb.co.com/35rmzqZg/Granite-Speckled-Grey.jpg",
         "category": "stone",
         "brand": "Mir Ceramic",
+        "tags": [
+            "Industrial",
+            "Grey",
+            "Durable"
+        ],
         "price": 74.30,
         "currency": "USD",
         "dimensions": "60x60 cm",
@@ -160,6 +215,11 @@
         "image": "https://i.ibb.co.com/3YG4B0Ns/Victorian-Floral-Pattern.jpg",
         "category": "decorative",
         "brand": "Somany Ceramics",
+        "tags": [
+            "Vintage",
+            "Floral",
+            "Decorative"
+        ],
         "price": 15.20,
         "currency": "USD",
         "dimensions": "15x15 cm",
@@ -168,4 +228,3 @@
         "ratings": 400
     }
 ]
-
