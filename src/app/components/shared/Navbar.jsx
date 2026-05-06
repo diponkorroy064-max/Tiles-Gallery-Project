@@ -2,14 +2,15 @@
 import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import Link from 'next/link';
+import Navlink from './Navlink'
 import React from 'react';
 import avatarImg from '@/assets/User_Avatar.png';
 
 
 const links = <>
-    <li><Link href={'/'}>Home</Link></li>
-    <li><Link href={'/allTiles'}>All Tiles</Link></li>
-    <li><Link href={'/myProfile'}>My Profile</Link></li>
+    <li><Navlink href={'/'}>Home</Navlink></li>
+    <li><Navlink href={'/allTiles'}>All Tiles</Navlink></li>
+    <li><Navlink href={'/myProfile'}>My Profile</Navlink></li>
 </>
 
 
@@ -36,7 +37,7 @@ const Navbar = () => {
                 </div>
                 <h1 className="text-2xl text-blue-700 font-extrabold text-shadow-gray-500 text-shadow-2xs">Tiles Gallery</h1>
             </div>
-            
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
@@ -44,12 +45,12 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end gap-3">
-                { isPending? "loading..." :
+                {isPending ? "loading..." :
                     user ? (
                         <>
                             <p className='text-green-600 font-bold'>{user?.name || "User"}</p>
                             <Image className='border border-gray-400 rounded-full' src={user?.image || avatarImg} width={40} height={40} alt='User Avater'></Image>
-                            <button className='btn btn-primary' onClick={async()=> await authClient.signOut()}>Sign Out</button>
+                            <button className='btn btn-primary' onClick={async () => await authClient.signOut()}>Sign Out</button>
                         </>) :
                         (<button className='btn btn-primary'><Link href={'/signIn'}>Sign in</Link></button>)
                 }
