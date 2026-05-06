@@ -2,20 +2,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+
 const TilesCard = ({ tiles }) => {
     // console.log(tiles);
     return (
         <div className="card bg-base-100 shadow-sm border border-gray-300">
-            <figure className="px-10 pt-10">
-                {/* <Image src={tiles.image} height={100} width={100} alt={tiles.title} /> */}
-            </figure>
+            <div className="pt-2.5 px-2.5">
+                <Image className='border border-gray-400 rounded-md w-full h-50' src={tiles.image} height={500} width={500} alt={tiles.title} />
+            </div>
+
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{tiles.title}</h2>
-                <h2 className="card-title">{tiles.price}</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                {/* <h2 className="card-title">{tiles.price}</h2> */}
 
-                <div className="btn w-full btn-primary">
-                    <Link href={`/tileDetails/${tiles.id}`}>Details</Link>
+                <div className="w-full">
+                    <Link className='w-full' href={`/tileDetails/${tiles.id}`}><button className='btn w-full btn-primary'>Details</button> </Link>
                 </div>
             </div>
         </div>
@@ -23,3 +24,4 @@ const TilesCard = ({ tiles }) => {
 };
 
 export default TilesCard;
+
