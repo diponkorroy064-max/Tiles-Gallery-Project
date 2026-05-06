@@ -6,6 +6,10 @@ import { FaStar } from 'react-icons/fa';
 import { FaRegCircleDot } from 'react-icons/fa6';
 
 
+export const metadata = {
+    title: "Tiles Gallery Project - tile details",
+}
+
 const TileDetailsPage = async({ params }) => {
     const { id } = await params;
     // console.log("Clicked id by params", id);

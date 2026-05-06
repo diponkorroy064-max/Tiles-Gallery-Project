@@ -3,6 +3,9 @@ import BreakingNews from "../components/homeComponent/MarqueeSection";
 import Featured from "../components/homeComponent/Featured";
 
 
+export const metadata = {
+  title: "Tiles Gallery Project - home",
+}
 
 export default function Home() {
   return (

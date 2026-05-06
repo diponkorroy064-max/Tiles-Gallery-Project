@@ -20,6 +20,6 @@ export async function proxy(request) {
 }
 
 export const config = {
-    matcher: ["/allTiles", "/myProfile", "/tileDetails/:path*"],
+    matcher: ["/myProfile", "/tileDetails/:path*"],
 }
 

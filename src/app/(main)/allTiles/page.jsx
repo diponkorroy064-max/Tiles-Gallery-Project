@@ -4,6 +4,10 @@ import React from 'react';
 import { IoIosSearch } from 'react-icons/io';
 
 
+export const metadata = {
+    title: "Tiles Gallery Project - all tiles",
+}
+
 const AllTilesPage = async() => {
     const allTiles = await allTilesData();
     // console.log(allTiles);
