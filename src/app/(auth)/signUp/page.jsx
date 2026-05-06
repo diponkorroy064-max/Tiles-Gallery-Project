@@ -64,7 +64,7 @@ const SignUpPage = () => {
                         {errors.password && <span className='text-red-500'>Password is required</span>}
                     </fieldset>
 
-                    <button className="btn btn-neutral mt-4">Login</button>
+                    <button className="btn btn-neutral mt-4">Sign Up</button>
                 </fieldset>
             </form>
         </div>
