@@ -24,6 +24,7 @@ const SignUpPage = () => {
             image: photo,
             callbackURL: "/signIn",
         });
+
         console.log("signup response", res, error);
 
         if (error) {

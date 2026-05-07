@@ -25,10 +25,10 @@ const TileDetailsPage = async({ params }) => {
     return (
         <div className='container mx-auto px-10 py-15'>
 
-            <div className="card lg:card-side shadow-md border grid grid-cols-1 md:grid-cols-2">
+            <div className="card lg:card-side shadow-md border grid grid-cols-1 lg:grid-cols-2">
 
                 <div className='card-body col-span-1'>
-                    <Image className='w-full border border-gray-400 rounded-md' src={image} height={500} width={500} alt={title} />
+                    <Image className='w-full h-full border border-gray-400 rounded-md' src={image} height={500} width={500} alt={title} />
                 </div>
                 
                 <div className="card-body col-span-1">
@@ -39,7 +39,7 @@ const TileDetailsPage = async({ params }) => {
 
                         <p className='font-semibold text-gray-700'>{description}</p>
 
-                        <div className='font-bold text-2xl text-blue-600 flex flex-row gap-6'>
+                        <div className='font-bold text-2xl text-blue-600 flex flex-col md:flex-row gap-6'>
                             {
                                 tags.map((item, idx) => <span key={idx} className='flex items-center gap-1'><FaRegCircleDot className='text-sm'/> {item}</span>)
                             }
@@ -55,7 +55,7 @@ const TileDetailsPage = async({ params }) => {
 
                         <p className='font-semibold'>Brand Name : <span className='text-2xl font-bold text-green-500'>{brand}</span></p>
 
-                        <div className='flex gap-3'>
+                        <div className='flex flex-wrap gap-3'>
                             <button className='btn w-50 bg-pink-500 text-white hover:bg-gray-900'>Buy Now</button>
                             <button className='btn w-50 bg-blue-500 text-white hover:bg-gray-900'>Add to Card</button>
                         </div>

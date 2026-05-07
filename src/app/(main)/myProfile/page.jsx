@@ -1,13 +1,35 @@
+'use client'
+import { authClient } from '@/lib/auth-client';
+import Image from 'next/image';
 import React from 'react';
+import userImg from '@/assets/User_Avatar.png'
+import Link from 'next/link';
 
-export const metadata = {
-    title: "Tiles Gallery Project - My Profile",
-}
 
 const MyProfilePage = () => {
+    const { data } = authClient.useSession();
+    // console.log(data);
+    const user = data?.user;
+    // console.log(user);
+
+
     return (
-        <div>
-            this is my profile page
+        <div className='flex justify-center items-center my-30 container mx-auto'>
+            <div className="card bg-base-100 w-100 shadow-sm border border-gray-300 pt-10">
+                <figure>
+                    <Image className='border border-gray-300 rounded-full w-40 shadow' src={user?.image || userImg} alt="user image" width={96} height={96}/>
+                </figure>
+
+                <div className="card-body space-y-5">
+                    <h2 className="text-3xl font-bold text-center">{user?.name || "user name"}</h2>
+
+                    <h2 className="font-bold text-center">{user?.email || "user email"}</h2>
+                
+                    <div className="card-actions justify-center">
+                        <button className="btn btn-outline btn-primary"><Link href={"/updateProfile"}>Profile Update</Link></button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
