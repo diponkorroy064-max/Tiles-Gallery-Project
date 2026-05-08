@@ -6,7 +6,7 @@ import 'animate.css';
 
 const Hero = () => {
     return (
-        <section className="container mx-auto relative w-full h-[80vh] flex items-center justify-center overflow-hidden bg-gray-100">
+        <section className="container mx-auto relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
             {/* Background Image / Overlay */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-black/30 z-10" /> {/* Dark overlay for text readability */}

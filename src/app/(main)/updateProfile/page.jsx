@@ -28,9 +28,9 @@ const updateProfilePage = () => {
     
 
     return (
-        <div className='container mx-auto flex justify-center items-center my-30'>
+        <div className='container mx-auto flex justify-center items-center my-30 px-5'>
             <form onSubmit={handleSubmit(handleUpdate)}>
-                <fieldset className="fieldset bg-base-200 border-gray-300 rounded-box w-100 border p-4 space-y-5">
+                <fieldset className="fieldset bg-base-200 border-gray-300 rounded-box border p-4 space-y-5">
                     <label className="font-bold text-xl">Change Your Name</label>
                     <input name='name' type="name" className="input w-full" placeholder="Change Name" {...register("name", { required: true })} />
                     {errors.name && <span className='text-red-500'>Name is required</span>}

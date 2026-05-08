@@ -6,7 +6,6 @@ import Navlink from './Navlink'
 import React from 'react';
 import avatarImg from '@/assets/User_Avatar.png';
 
-
 const links = <>
     <li><Navlink href={'/'}>Home</Navlink></li>
     <li><Navlink href={'/allTiles'}>All Tiles</Navlink></li>
@@ -24,6 +23,7 @@ const Navbar = () => {
 
     return (
         <div className="container mx-auto navbar bg-base-100 shadow-sm px-3 md:px-10">
+
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
                 {isPending ? "loading..." :
                     user ? (
                         <>
-                            <p className='text-green-600 font-bold hover:text-blue-600'><Link href={"/myProfile"}>{user?.name || "User"}</Link></p>
+                            <p className='text-green-600 font-bold hover:text-blue-600 hidden md:flex'><Link href={"/myProfile"}>{user?.name || "User"}</Link></p>
                             <Link href={"/myProfile"}><Image className='border border-gray-400 rounded-full' src={user?.image || avatarImg} width={40} height={40} alt='User Avater'></Image></Link>
                             <button className='btn btn-primary' onClick={async () => await authClient.signOut()}>Sign Out</button>
                         </>) :

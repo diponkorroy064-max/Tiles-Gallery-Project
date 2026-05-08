@@ -9,14 +9,14 @@ import 'animate.css';
 
 const MyProfilePage = () => {
     const { data } = authClient.useSession();
-    // console.log(data);
+    console.log(data);
     const user = data?.user;
-    // console.log(user);
+    // console.log("user response",user);
 
 
     return (
-        <div className='flex justify-center items-center my-30 container mx-auto'>
-            <div className="card bg-base-100 w-100 shadow-sm border border-gray-300 pt-10">
+        <div className='flex justify-center items-center my-30 container mx-auto px-5'>
+            <div className="card bg-base-100 shadow-sm border border-gray-300 w-100 pt-10">
                 <figure className='animate__animated animate__zoomIn'>
                     <Image className='border border-gray-300 rounded-full w-40 shadow' src={user?.image || userImg} alt="user image" width={96} height={96}/>
                 </figure>
