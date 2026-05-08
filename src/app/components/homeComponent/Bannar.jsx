@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import bannarImg from '@/assets/bannar_img1.avif'
+import 'animate.css';
+
 
 const Hero = () => {
     return (
@@ -17,7 +19,7 @@ const Hero = () => {
 
             {/* Content */}
             <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8">
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tighter text-white drop-shadow-lg">
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tighter text-white drop-shadow-lg animate__animated animate__zoomIn">
                     Discover Your Perfect <span className="text-indigo-400">Aesthetic</span>
                 </h1>
 
@@ -33,7 +35,7 @@ const Hero = () => {
                     >
                         Browse Now
                         <svg
-                            className="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1"
+                            className="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1 animate-bounce"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"

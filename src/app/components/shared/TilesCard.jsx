@@ -5,8 +5,10 @@ import React from 'react';
 
 const TilesCard = ({ tiles }) => {
     // console.log(tiles);
+
     return (
-        <div className="card bg-base-100 shadow-sm border border-gray-300">
+        <div className="card bg-base-100 shadow-sm border border-gray-300 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+
             <div className="pt-2.5 px-2.5">
                 <Image className='border border-gray-400 rounded-md w-full h-50' src={tiles.image} height={500} width={500} alt={tiles.title} />
             </div>

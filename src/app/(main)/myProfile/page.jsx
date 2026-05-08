@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import userImg from '@/assets/User_Avatar.png'
 import Link from 'next/link';
+import 'animate.css';
 
 
 const MyProfilePage = () => {
@@ -16,7 +17,7 @@ const MyProfilePage = () => {
     return (
         <div className='flex justify-center items-center my-30 container mx-auto'>
             <div className="card bg-base-100 w-100 shadow-sm border border-gray-300 pt-10">
-                <figure>
+                <figure className='animate__animated animate__zoomIn'>
                     <Image className='border border-gray-300 rounded-full w-40 shadow' src={user?.image || userImg} alt="user image" width={96} height={96}/>
                 </figure>
 
@@ -25,7 +26,7 @@ const MyProfilePage = () => {
 
                     <h2 className="font-bold text-center">{user?.email || "user email"}</h2>
                 
-                    <div className="card-actions justify-center">
+                    <div className="card-actions justify-center animate__animated animate__bounce">
                         <button className="btn btn-outline btn-primary"><Link href={"/updateProfile"}>Profile Update</Link></button>
                     </div>
                 </div>
